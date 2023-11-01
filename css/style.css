@@ -176,6 +176,7 @@ section.fade-out {
 button{
     font-family: inherit;
     user-select: none;
+    display: flex;
 }
 
 .btn{
