@@ -1035,3 +1035,16 @@ button{
     font-size: 16px;
     margin-top: 20px;
 }
+.inps{
+    display: flex;
+          width: 215px;
+          padding: 10px 0 10px 15px;
+          font-weight: 400;
+          color: #377D6A;
+          background: #efefef;
+          border: 0;
+          border-radius: 3px;
+          outline: 0;
+          text-indent: 70px; // Arbitrary.
+          transition: all .3s ease-in-out;
+}

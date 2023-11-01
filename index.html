@@ -107,35 +107,53 @@
       </div>
       <div class="about-text">
         <h3>Student Login</h3>
-          <input style= "display: inline-block;
-          width: 215px;
-          padding: 10px 0 10px 15px;
-          font-weight: 400;
-          color: #377D6A;
-          background: #efefef;
-          border: 0;
-          border-radius: 3px;
-          outline: 0;
-          text-indent: 70px; // Arbitrary.
-          transition: all .3s ease-in-out;
-        "  "email" name="email" id="email" placeholder="E-MAIL ID" required><br>
+          <input  class="inps" "email" name="email" id="email" placeholder="E-MAIL ID" required><br>
         <br>
-          <input style= "display: inline-block;
-          width: 215px;
-          padding: 10px 0 10px 15px;
-          font-weight: 400;
-          color: #377D6A;
-          background: #efefef;
-          border: 0;
-          border-radius: 3px;
-          outline: 0;
-          text-indent: 70px; // Arbitrary.
-          transition: all .3s ease-in-out;" type="password" name="password" id="password" placeholder="PASSWORD" required>
+          <input  class="inps" type="password" name="password" id="password" placeholder="PASSWORD" required>
+          <script>
+            const express = require('express');
+            const app = express();
+            const sqlite3 = require('sqlite3').verbose();
+            const db = new sqlite3.Database('users.db');
+            const bcrypt = require('bcrypt');
+            const bodyParser = require('body-parser');
+
+            app.use(bodyParser.urlencoded({ extended: false }));
+
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value;
+
+            document.getElementsByClassName("btn link-item").addEventListener(redirect)
+
+
+              function redirect(){
+                db.get('SELECT * FROM users WHERE email = ?', email, (err, row) => {
+                    if (err) {
+                      window.alert("Interal Server error");
+                    }
+                
+                    if (!row) {
+                      window.alert('Invalid email or password' );
+                    }
+                
+                    const isValidPassword = bcrypt.compareSync(password, row.password);
+                
+                    if (!isValidPassword) {
+                        window.alert('Invalid email or password' );
+                    }
+                    window.redirect('/next-page.html');
+                    
+              }
+
+              };
+
+          </script>
           <br>
           <br>
-          <a href="#about" class="btn link-item">Login</a>
+          <button id="loginButton" class="btn link-item">Login</button>
           <br>
-          <a href="#"class="btn link-item">FORGOT PASSWORD</a>
+          <a href="#"class="btn link-item" >FORGOT PASSWORD</a>
+
         </form>
       </div>
     </div>
@@ -439,6 +457,7 @@
 
     <script src="js/script.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/login.js"></script>
 
     <script>
       function sendEmail() {
