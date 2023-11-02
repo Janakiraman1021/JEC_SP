@@ -110,47 +110,10 @@
           <input  class="inps" "email" name="email" id="email" placeholder="E-MAIL ID" required><br>
         <br>
           <input  class="inps" type="password" name="password" id="password" placeholder="PASSWORD" required>
-          <script>
-            const express = require('express');
-            const app = express();
-            const sqlite3 = require('sqlite3').verbose();
-            const db = new sqlite3.Database('users.db');
-            const bcrypt = require('bcrypt');
-            const bodyParser = require('body-parser');
-
-            app.use(bodyParser.urlencoded({ extended: false }));
-
-            let password = document.getElementById("password").value;
-            let email = document.getElementById("email").value;
-
-            document.getElementsByClassName("btn link-item").addEventListener(redirect)
-
-
-              function redirect(){
-                db.get('SELECT * FROM users WHERE email = ?', email, (err, row) => {
-                    if (err) {
-                      window.alert("Interal Server error");
-                    }
-                
-                    if (!row) {
-                      window.alert('Invalid email or password' );
-                    }
-                
-                    const isValidPassword = bcrypt.compareSync(password, row.password);
-                
-                    if (!isValidPassword) {
-                        window.alert('Invalid email or password' );
-                    }
-                    window.redirect('/next-page.html');
-                    
-              }
-
-              };
-
-          </script>
+        
           <br>
           <br>
-          <button id="loginButton" class="btn link-item">Login</button>
+          <a href="#"class="btn link-item" >Login</a>
           <br>
           <a href="#"class="btn link-item" >FORGOT PASSWORD</a>
 
@@ -170,169 +133,6 @@
               <h2>Jaya Engineering College</h2>
             </div>
           </div>
-          <div class="row">
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item">
-              <div class="portfolio-item-thumbnail">
-                <img
-                  src="images/portfolio/candidate.png"
-                  alt="portfolio item thumb"
-                />
-              </div>
-              <h3 class="portfolio-item-title"></h3>
-              <button type="button" class="btn view-project-btn">
-                View Source 
-              </button>
-              <div class="portfolio-item-details">
-                <div class="description">
-                  <p>
-                    Been through a lot in life
-                    We have, together
-                    Not a single regret I have
-                    Not now, not never
-                    Best Friends, meant to be
-                    Is what we really are
-                    Through good times and ba
-                    You’re my life’s brightest star
-                    Happy birthday
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item">
-              <div class="portfolio-item-thumbnail">
-                <img
-                  src="images/portfolio/crypto.png"
-                  alt="portfolio item thumb"
-                />
-              </div>
-              <h3 class="portfolio-item-title">  </h3>
-              <button type="button" class="btn view-project-btn">
-                View Source 
-              </button>
-              <div class="portfolio-item-details">
-                <div class="description">
-                  <p>
-                    My wish for you on this special day
-                    Is that the coming year goes well
-                    And may life treat you great in all the ways
-                    That my wishes and words can’t tell.
-                    
-                    Behind you now is yesterday.
-                    Let your experience and knowledge pave the way
-                    Here’s to you and to your success
-                    We know you will give it your best.
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item">
-              <div class="portfolio-item-thumbnail">
-                <img
-                  src="images/portfolio/all.png"
-                  alt="portfolio item thumb"
-                />
-              </div>
-              <h3 class="portfolio-item-title"> </h3>
-              <button type="button" class="btn view-project-btn">
-                 View Source
-              </button>
-              <div class="portfolio-item-details">
-                <div class="description">
-                  <p>
-                    Another year has passed.
-                    A birthday for you is in store
-                    May you find this coming year
-                    Be one with lots of open doors.
-                    
-                    Follow your dreams
-                    Remember you can achieve
-                    All that you dream
-                    Whatever your mind can conceive
-                    
-                    So this poem brings
-                    wishes for you
-                    in hopes that the coming year
-                    is filled with things you love to do.                  </p>
-                </div>
-                </div>
-              </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item">
-              <div class="portfolio-item-thumbnail">
-                <img
-                  src="images/portfolio/tesla.png"
-                  alt="portfolio item thumb"
-                />
-              </div>
-              <h3 class="portfolio-item-title">  </h3>
-              <button type="button" class="btn view-project-btn">
-              View Source     
-              </button>
-              <div class="portfolio-item-details">
-                <div class="description">
-                  <p>
-                    Another year has passed.
-                    A birthday for you is in store
-                    May you find this coming year
-                    Be one with lots of open doors.
-                    
-                    Follow your dreams
-                    Remember you can achieve
-                    All that you dream
-                    Whatever your mind can conceive
-                    
-                    So this poem brings
-                    wishes for you
-                    in hopes that the coming year
-                    is filled with things you love to do.
-                  </p>
-                </div>
-              </div>
-              </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item">
-              <div class="portfolio-item-thumbnail">
-                <img
-                  src="images/portfolio/music.png"
-                  alt="portfolio item thumb"
-                />
-              </div>
-              <h3 class="portfolio-item-title"></h3>
-              <button type="button" class="btn view-project-btn">
-                View Source 
-              </button>
-              <div class="portfolio-item-details">
-                <div class="description">
-                  <p>
-                    On your birthday,
-                    I wanted you to know
-                    that I am so fortunate
-                    not only to have such
-                    a strong female figure
-                    in my life, but also
-                    the most reliable,
-                    trustworthy friend
-                    I could wish for.
-                  </p>
-                </div>
-                </div>
-              </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item Start -->
-            
-            <!-- Portfolio Item End -->
           </div>
         </div>
       </section>
@@ -344,7 +144,7 @@
         <div class="container">
           <div class="row">
             <div class="section-title">
-              <h2>contact me</h2>
+              <h2>contact Us</h2>
             </div>
           </div>
           <div class="row">
@@ -395,33 +195,23 @@
             <div class="contact-info">
               <div class="contact-info-item">
                 <h3>Email</h3>
-                <p>janakiramankeerthivelan1021@gmail.com</p>
+                <p> admission@jec.ac.in, <br>info@jec.ac.in</p>
               </div>
               <div class="contact-info-item">
-                <h3>Phone</h3>
-                <p>7604913189</p>
+                <h3>Address & Phone</h3>
+                <p>College Address<br>
+                  CTH Road, Prakash Nagar,<br>
+                  
+                  Thiruninravur, Chennai, Tamil Nadu 602024<br>
+                  
+                  Phone : 044-26300982, 26341264, 26390041.<br>
+                  
+                  Whatsapp : +91-85310 77777</p>
               </div>
               <div class="contact-info-item">
-                <h3>Follow Me</h3>
-                <div class="social-links">
+                <h3>Follow Us</h3>
                   <a
-                    href="https://www.linkedin.com/in/janaki-raman-5661b2236//"
-                    target="_blank"
-                    ><i class="fab fa-linkedin"></i
-                  ></a>
-                  <a href="https://github.com/Janakiraman1021" target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100087962869369"
-                    target="_blank"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="https://twitter.com/janthedevking21" target="_blank"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    href="https://www.instagram.com/alone._.king._.jr/"
+                    href="https://www.instagram.com/jayagroupofcolleges/"
                     target="_blank"
                     ><i class="fab fa-instagram"></i
                   ></a>
