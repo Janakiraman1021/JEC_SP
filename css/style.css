@@ -5,12 +5,12 @@
 
 /* Variables */
 :root{
-    --main-color: #e02f6b;
+    --main-color: #2f32e0;
     --blue: #0000ff;
     --blue-dark: #18293c;
     --orange: #ffa500;
     --green-yellow: #cddc39;
-    --pink-light: #efa2b4;
+    --pink-light: #5810dd;
     --cyan-light: #aef1ee;
     --white: #ffffff;
     --white-alpha-40: rgba(255,255,255,0.40);
