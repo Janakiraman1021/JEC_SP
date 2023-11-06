@@ -48,9 +48,9 @@
               <div class="nav-inner">
                 <ul>
                   <li><a href="#home" class="nav-item link-item">Home</a></li>
-                  <li><a href="login.html" class="nav-item link-item">Login</a></li>
+                  <li><a href="#about" class="nav-item link-item">Login</a></li>
                   <li>
-                    <a href="login.html" class="nav-item link-item"
+                    <a href="#about" class="nav-item link-item"
                       >Profile </a>
                     
                     <a href="#portfolio" class="nav-item link-item"
@@ -107,16 +107,16 @@
       </div>
       <div class="about-text">
         <h3>Student Login</h3>
-          <input  id="email"  required><br>
+          <input  id="email" class="inps" placeholder="Email "  required><br>
         <br>
-          <input     id="password"  required>
+          <input   type="password"  id="password" class="inps" placeholder="Password" required>
         
           <br>
 
           <br>
           <button  onclick="verify()"  class="btn link-item" >Login</button>
           <br>
-          <a href="#"class="btn link-item" >FORGOT PASSWORD</a>
+          <a class="btn link-item" >FORGOT PASSWORD</a>
           <script>
            
             function verify(){
@@ -125,6 +125,7 @@
             if (email=="janakiramankeerthivelan1021@gmail.com"){
               if (pass == 110822205025){
                 window.alert("Hello Login Successfull");
+                
               }
             }
             else{
@@ -132,8 +133,11 @@
               window.alert(email);
               window.alert(pass);
             }
+            window.location("profile.html");         
           }
-          </script>
+
+
+              </script>
         </form>
       </div>
     </div>

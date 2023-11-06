@@ -1000,4 +1000,26 @@ button{
     .pp-header h3{
         font-size: 20px;
     }
-}                                                                                                                                                                                                               
+}        
+
+
+.inps::placeholder {
+    color: var(--blue-dark);
+    opacity: 0.8;
+    font-weight: 300;
+}
+.inps {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--white-alpha-25);
+    padding: 0 20px;
+    color: var(--blue-dark);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
