@@ -6,12 +6,12 @@
 /* Variables */
 :root{
     --main-color: #2f32e0;
-    --blue: #0000ff;
+    --blue: #15ff00;
     --blue-dark: #18293c;
     --orange: #ffa500;
     --green-yellow: #cddc39;
-    --pink-light: #5810dd;
-    --cyan-light: #aef1ee;
+    --pink-light: #10c5dd;
+    --cyan-light: #237e79;
     --white: #ffffff;
     --white-alpha-40: rgba(255,255,255,0.40);
     --white-alpha-25: rgba(255,255,255,0.25);

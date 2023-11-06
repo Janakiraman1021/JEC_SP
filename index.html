@@ -107,16 +107,33 @@
       </div>
       <div class="about-text">
         <h3>Student Login</h3>
-          <input  class="inps" "email" name="email" id="email" placeholder="E-MAIL ID" required><br>
+          <input  id="email"  required><br>
         <br>
-          <input  class="inps" type="password" name="password" id="password" placeholder="PASSWORD" required>
+          <input     id="password"  required>
         
           <br>
+
           <br>
-          <a href="#"class="btn link-item" >Login</a>
+          <button  onclick="verify()"  class="btn link-item" >Login</button>
           <br>
           <a href="#"class="btn link-item" >FORGOT PASSWORD</a>
-
+          <script>
+           
+            function verify(){
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+            if (email=="janakiramankeerthivelan1021@gmail.com"){
+              if (pass == 110822205025){
+                window.alert("Hello Login Successfull");
+              }
+            }
+            else{
+              window.alert("Login Failured !")
+              window.alert(email);
+              window.alert(pass);
+            }
+          }
+          </script>
         </form>
       </div>
     </div>
